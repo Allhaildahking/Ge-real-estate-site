@@ -1,0 +1,130 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#ffffff;
+    color:#222;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar{
+    width:90%;
+    max-width:1200px;
+    height:80px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#0A2342;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo span{
+    font-size:2rem;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#D4AF37;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+.btn{
+    text-decoration:none;
+    background:#D4AF37;
+    color:white;
+    padding:12px 24px;
+    border-radius:50px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#0A2342;
+}
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+.menu-btn{
+    display:none;
+    font-size:1.8rem;
+    cursor:pointer;
+    color:#0A2342;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media(max-width:768px){
+
+.nav-links,
+.btn{
+    display:none;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.logo{
+    font-size:1.3rem;
+}
+
+}
