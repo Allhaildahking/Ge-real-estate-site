@@ -3,57 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giant Eagle Real Estate Ltd. — trusted property, real estate and development solutions.">
     <title>Giant Eagle Real Estate Ltd.</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ===========================
-         HEADER
-    ============================ -->
+    <header class="header" id="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="Giant Eagle Real Estate home">
+                <img src="images/IMG-20260608-WA0006.jpg" alt="Giant Eagle Real Estate Ltd. logo">
+            </a>
 
-    <header class="header">
-
-        <nav class="navbar">
-
-            <div class="logo">
-                <span>🦅</span>
-                Giant Eagle
+            <div class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#properties" class="nav-cta">Explore Properties <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <ul class="nav-links">
-
-                <li><a href="#">Home</a></li>
-
-                <li><a href="#">About</a></li>
-
-                <li><a href="#">Services</a></li>
-
-                <li><a href="#">Properties</a></li>
-
-                <li><a href="#">Contact</a></li>
-
-            </ul>
-
-            <a href="#" class="btn">Get Started</a>
-
-            <div class="menu-btn">
+            <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fa-solid fa-bars"></i>
-            </div>
-
+            </button>
         </nav>
 
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#properties">Properties</a>
+            <a href="#contact">Contact</a>
+            <a href="#properties" class="mobile-cta">Explore Properties</a>
+        </div>
     </header>
 
-    <script src="js/script.js"></script>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
 
+            <div class="hero-content">
+                <p class="eyebrow"><span></span> Giant Eagle Real Estate Ltd.</p>
+                <h1>Trust the <em>Process.</em></h1>
+                <p class="hero-copy">Thoughtful property solutions, built on experience, integrity and a commitment to doing things right.</p>
+                <a href="#properties" class="hero-cta">Explore Properties <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hero-collage" aria-label="Selected Giant Eagle property imagery">
+                <button class="collage-card card-one video-trigger" type="button" data-video="" aria-label="Open property video">
+                    <img src="images/Apartment.jpg" alt="Modern apartment building" loading="eager">
+                    <span class="play"><i class="fa-solid fa-play"></i></span>
+                </button>
+                <button class="collage-card card-two video-trigger" type="button" data-video="" aria-label="Open property video">
+                    <img src="images/Office.jpg" alt="Modern office space" loading="eager">
+                    <span class="play"><i class="fa-solid fa-play"></i></span>
+                </button>
+                <button class="collage-card card-three video-trigger" type="button" data-video="" aria-label="Open property video">
+                    <img src="images/Construction.jpg" alt="Construction project" loading="eager">
+                    <span class="play"><i class="fa-solid fa-play"></i></span>
+                </button>
+                <button class="collage-card card-four video-trigger" type="button" data-video="" aria-label="Open property video">
+                    <img src="images/estate.jpg" alt="Residential property" loading="eager">
+                    <span class="play"><i class="fa-solid fa-play"></i></span>
+                </button>
+                <button class="collage-card card-five video-trigger" type="button" data-video="" aria-label="Open property video">
+                    <img src="images/Consultation.jpg" alt="Real estate consultation" loading="eager">
+                    <span class="play"><i class="fa-solid fa-play"></i></span>
+                </button>
+
+                <div class="experience-badge">
+                    <strong>12<span>+</span></strong>
+                    <span>Years of<br>Excellence</span>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>Property. Development. Trust.</span>
+                <a href="#about" aria-label="Scroll to learn more"><i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <section class="placeholder-section" id="about"><span>ABOUT · NEXT SECTION</span></section>
+        <section class="placeholder-section" id="services"><span>SERVICES · NEXT SECTION</span></section>
+        <section class="placeholder-section" id="properties"><span>PROPERTIES · NEXT SECTION</span></section>
+        <section class="placeholder-section" id="contact"><span>CONTACT · NEXT SECTION</span></section>
+    </main>
+
+    <div class="video-modal" id="video-modal" aria-hidden="true">
+        <div class="video-modal-backdrop"></div>
+        <div class="video-modal-content" role="dialog" aria-modal="true" aria-label="Property video">
+            <button class="video-close" type="button" aria-label="Close video"><i class="fa-solid fa-xmark"></i></button>
+            <video id="property-video" controls playsinline></video>
+            <p>Add the corresponding property video to <code>data-video</code> when the video files are ready.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
